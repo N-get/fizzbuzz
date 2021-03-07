@@ -3,16 +3,14 @@ import unittest
 import fizzbuzz
 class fizz(unittest.TestCase):
     def test_fizzbuzz(self):
-        for i in range(101):
-            if (i == 0):
-                i = 1
+        for i in range(1, 101):
             result = fizzbuzz.fizzbuzz(i)
             if(i % 3 == 0 and i % 5 == 0):
-                self.assertEqual(result, "fizzbuzz")
+                self.assertEqual(result, "FizzBuzz")
             elif(i % 3 == 0):
-                self.assertEqual(result, "fizz")
+                self.assertEqual(result, "Fizz")
             elif(i % 5 == 0):
-                self.assertEqual(result, "buzz")
+                self.assertEqual(result, "Buzz")
             else:
                 self.assertEqual(result, i)
 
