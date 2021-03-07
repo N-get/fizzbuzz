@@ -3,12 +3,15 @@ import unittest
 import fizzbuzz
 class fizz(unittest.TestCase):
     def test_fizzbuzz(self):
-        for i in range(100):
+        for i in range(101):
             if (i == 0):
                 i = 1
             result = fizzbuzz.fizzbuzz(i)
-            if(i % 3 == 0):
+            if(i % 3 == 0 and i % 5 == 0):
+                self.assertEqual(result, "fizzbuzz")
+            elif(i % 3 == 0):
                 self.assertEqual(result, "fizz")
+            
             else:
                 self.assertEqual(result, i)
 
