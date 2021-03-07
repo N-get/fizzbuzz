@@ -11,7 +11,8 @@ class fizz(unittest.TestCase):
                 self.assertEqual(result, "fizzbuzz")
             elif(i % 3 == 0):
                 self.assertEqual(result, "fizz")
-            
+            elif(i % 5 == 0):
+                self.assertEqual(result, "buzz")
             else:
                 self.assertEqual(result, i)
 
